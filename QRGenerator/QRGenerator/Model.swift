@@ -23,7 +23,7 @@ enum ModelQR {
         }
         
     @Model
-    class StoredQRCode {
+    class StoredQRCode: Identifiable {
         @Attribute(.unique) var id: UUID
         var name: String
         var content: String

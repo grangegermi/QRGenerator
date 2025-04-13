@@ -43,7 +43,7 @@ struct MainScreen: View {
                     .tabItem { Mode.generation.label }
                     .tag(Mode.generation)
 
-                LibraryView()
+                Library()
                     .tabItem { Mode.library.label }
                     .tag(Mode.library)
 
@@ -53,12 +53,6 @@ struct MainScreen: View {
             }
             .navigationTitle(selectedTab.title)
         }
-    }
-}
-
-struct LibraryView: View {
-    var body: some View {
-        Text("Library View")
     }
 }
 

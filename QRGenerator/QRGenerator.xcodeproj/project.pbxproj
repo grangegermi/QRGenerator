@@ -21,6 +21,8 @@
 		DBF0A3962DABFE4B00DB5FF0 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF0A3952DABFE4B00DB5FF0 /* Model.swift */; };
 		DBF0A3982DABFE8200DB5FF0 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF0A3972DABFE8200DB5FF0 /* Services.swift */; };
 		DBF0A39B2DAC103300DB5FF0 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF0A39A2DAC103300DB5FF0 /* Styles.swift */; };
+		DBF0A39E2DAC132000DB5FF0 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF0A39D2DAC132000DB5FF0 /* Library.swift */; };
+		DBF0A3A02DAC143700DB5FF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBF0A39F2DAC143700DB5FF0 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		DBF0A3972DABFE8200DB5FF0 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		DBF0A39A2DAC103300DB5FF0 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		DBF0A39C2DAC10DB00DB5FF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		DBF0A39D2DAC132000DB5FF0 /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
+		DBF0A39F2DAC143700DB5FF0 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,7 @@
 		DBF0A3552DABF9A100DB5FF0 = {
 			isa = PBXGroup;
 			children = (
+				DBF0A39F2DAC143700DB5FF0 /* LaunchScreen.storyboard */,
 				DBF0A3602DABF9A100DB5FF0 /* QRGenerator */,
 				DBF0A3712DABF9A700DB5FF0 /* QRGeneratorTests */,
 				DBF0A37B2DABF9A700DB5FF0 /* QRGeneratorUITests */,
@@ -110,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				DBF0A39C2DAC10DB00DB5FF0 /* Info.plist */,
+				DBF0A39D2DAC132000DB5FF0 /* Library.swift */,
 				DBF0A3612DABF9A100DB5FF0 /* QRGeneratorApp.swift */,
 				DBF0A38B2DABFCBE00DB5FF0 /* MainScreen.swift */,
 				DBF0A38D2DABFCF200DB5FF0 /* GeneratorScreen.swift */,
@@ -255,6 +261,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBF0A3A02DAC143700DB5FF0 /* LaunchScreen.storyboard in Resources */,
 				DBF0A3692DABF9A600DB5FF0 /* Preview Assets.xcassets in Resources */,
 				DBF0A3662DABF9A600DB5FF0 /* Assets.xcassets in Resources */,
 			);
@@ -310,6 +317,7 @@
 				DBF0A3942DABFE2300DB5FF0 /* AppError.swift in Sources */,
 				DBF0A3922DABFDF500DB5FF0 /* QRGenerator.swift in Sources */,
 				DBF0A3982DABFE8200DB5FF0 /* Services.swift in Sources */,
+				DBF0A39E2DAC132000DB5FF0 /* Library.swift in Sources */,
 				DBF0A38E2DABFCF200DB5FF0 /* GeneratorScreen.swift in Sources */,
 				DBF0A3622DABF9A100DB5FF0 /* QRGeneratorApp.swift in Sources */,
 			);
@@ -481,7 +489,7 @@
 				INFOPLIST_FILE = QRGenerator/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -515,7 +523,7 @@
 				INFOPLIST_FILE = QRGenerator/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
