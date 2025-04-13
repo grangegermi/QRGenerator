@@ -5,53 +5,39 @@
 
 import SwiftUI
 
+struct Photo: Identifiable, Transferable {
+    let id = UUID()
+    let image: Image
+    let caption: String
+
+    static var transferRepresentation: some TransferRepresentation {
+        ProxyRepresentation(exporting: \.image)
+    }
+}
+
 struct QrCodeView: View {
-    let qrImage: UIImage
-
+    @Binding var item: ModelQR.QRCode?
+    
     var body: some View {
-        VStack(spacing: 20) {
-            Image(uiImage: qrImage)
-                .resizable()
-                .scaledToFit()
-                .frame(width: 250, height: 250)
-                .padding()
-
-            HStack {
-//                ShareLink(item: qrImage) {
-//                    Image(.resultShare)
-//                }
-
-                Button("Share") {
-                    let activityVC = UIActivityViewController(activityItems: [qrImage], applicationActivities: nil)
-                    UIApplication.shared.windows.first?.rootViewController?.present(activityVC, animated: true)
+        VStack(spacing: .zero) {
+            if let item {
+                Text(item.name)
+                    .font(.title)
+                    .padding()
+                
+                Image(uiImage: item.image)
+                    .resizable()
+                    .scaledToFit()
+                
+                let photo = Photo(image: Image(uiImage: item.image), caption: item.name)
+                ShareLink(item: photo, preview: SharePreview(photo.caption, image: photo.image)) {
+                    Label("Share QR Code", systemImage: "square.and.arrow.up")
+                        .modifier(ButtonStyle())
+                        .padding()
                 }
-                .padding()
-                .background(Color.green)
-                .foregroundColor(.white)
-                .cornerRadius(10)
-
-                Button("Save") {
-                    UIImageWriteToSavedPhotosAlbum(qrImage, nil, nil, nil)
-                }
-                .padding()
-                .background(Color.orange)
-                .foregroundColor(.white)
-                .cornerRadius(10)
-
-                Button("Print") {
-                    let printInfo = UIPrintInfo(dictionary: nil)
-                    printInfo.outputType = .photo
-                    let printController = UIPrintInteractionController.shared
-                    printController.printInfo = printInfo
-                    printController.printingItem = qrImage
-                    printController.present(animated: true)
-                }
-                .padding()
-                .background(Color.red)
-                .foregroundColor(.white)
-                .cornerRadius(10)
+            } else {
+                Text("not working")
             }
-            .padding()
         }
     }
 }
