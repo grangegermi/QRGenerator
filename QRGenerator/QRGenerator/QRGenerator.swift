@@ -37,4 +37,3 @@ class Generator: QRGenerator {
         return try generateQRCode(from: qrString, size: size)
     }
 }
-

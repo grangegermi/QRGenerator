@@ -21,7 +21,6 @@ struct QrCodeView: View {
 //                    Image(.resultShare)
 //                }
 
-
                 Button("Share") {
                     let activityVC = UIActivityViewController(activityItems: [qrImage], applicationActivities: nil)
                     UIApplication.shared.windows.first?.rootViewController?.present(activityVC, animated: true)

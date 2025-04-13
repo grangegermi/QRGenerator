@@ -10,7 +10,7 @@ struct GeneratorScreen: View {
 
     @State private var ssid: String = ""
     @State private var password: String = ""
-    @State private var qrImage: UIImage? = nil
+    @State private var qrImage: UIImage?
     @State private var isShowingSheet: Bool = false
 
     var body: some View {

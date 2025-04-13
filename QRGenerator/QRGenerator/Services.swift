@@ -13,7 +13,6 @@ struct EnvironmentValueGenerator: EnvironmentKey {
     static let defaultValue: QRGenerator = Services.qrGenerator
 }
 
-
 extension EnvironmentValues {
     var qrGenerator: QRGenerator {
         get {

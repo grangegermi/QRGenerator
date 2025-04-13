@@ -1,0 +1,57 @@
+disabled_rules: # rule identifiers to exclude from running
+  - identifier_name
+  - function_parameter_count
+opt_in_rules: # some rules are only opt-in
+  - control_statement
+  - empty_count
+  - trailing_newline
+  - colon
+  - comma
+  - force_cast
+  - force_try
+  - force_unwrapping
+  - cyclomatic_complexity
+  - file_length
+  - function_body_length
+  - identifier_name
+  - type_body_length
+  - nesting
+  - vertical_whitespace
+  
+included: # paths to include during linting. `--path` is ignored if present.
+  - QRGenerator
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - QRGeneratorTests
+  - QRGeneratorUITests
+   
+# naming rules can set warnings/errors for min_length and max_length
+# additionally they can set excluded names
+type_name:
+  min_length: 4 # only warning
+  max_length: # warning and error
+    warning: 30
+    error: 35
+  excluded: iPhone # excluded via string
+reporter: "xcode"
+  
+# Rule-specific configurations
+line_length: 140 # Maximum line length
+type_body_length:
+  warning: 300
+  error: 400
+file_length:
+  warning: 400
+  error: 500
+function_body_length:
+  warning: 40
+  error: 60
+nesting:
+  type_level: 2
+  function_level: 3
+
+# Analyzer control
+analyzer_rules:
+  - unused_optional_binding
+  - unused_closure_parameter
+  - explicit_self
+
