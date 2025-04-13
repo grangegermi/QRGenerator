@@ -2,8 +2,6 @@
 //  QRGeneratorUITests.swift
 //  QRGeneratorUITests
 //
-//  Created by Даша Волошина on 13.04.25.
-//
 
 import XCTest
 

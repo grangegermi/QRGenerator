@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		DBF0A3622DABF9A100DB5FF0 /* QRGeneratorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF0A3612DABF9A100DB5FF0 /* QRGeneratorApp.swift */; };
-		DBF0A3642DABF9A100DB5FF0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF0A3632DABF9A100DB5FF0 /* ContentView.swift */; };
 		DBF0A3662DABF9A600DB5FF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBF0A3652DABF9A600DB5FF0 /* Assets.xcassets */; };
 		DBF0A3692DABF9A600DB5FF0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBF0A3682DABF9A600DB5FF0 /* Preview Assets.xcassets */; };
 		DBF0A3732DABF9A700DB5FF0 /* QRGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF0A3722DABF9A700DB5FF0 /* QRGeneratorTests.swift */; };
 		DBF0A37D2DABF9A700DB5FF0 /* QRGeneratorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF0A37C2DABF9A700DB5FF0 /* QRGeneratorUITests.swift */; };
 		DBF0A37F2DABF9A700DB5FF0 /* QRGeneratorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF0A37E2DABF9A700DB5FF0 /* QRGeneratorUITestsLaunchTests.swift */; };
+		DBF0A38C2DABFCBE00DB5FF0 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF0A38B2DABFCBE00DB5FF0 /* MainScreen.swift */; };
+		DBF0A38E2DABFCF200DB5FF0 /* GeneratorScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF0A38D2DABFCF200DB5FF0 /* GeneratorScreen.swift */; };
+		DBF0A3902DABFD3A00DB5FF0 /* QrCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF0A38F2DABFD3A00DB5FF0 /* QrCodeView.swift */; };
+		DBF0A3922DABFDF500DB5FF0 /* QRGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF0A3912DABFDF500DB5FF0 /* QRGenerator.swift */; };
+		DBF0A3942DABFE2300DB5FF0 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF0A3932DABFE2300DB5FF0 /* AppError.swift */; };
+		DBF0A3962DABFE4B00DB5FF0 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF0A3952DABFE4B00DB5FF0 /* Model.swift */; };
+		DBF0A3982DABFE8200DB5FF0 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF0A3972DABFE8200DB5FF0 /* Services.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +42,6 @@
 /* Begin PBXFileReference section */
 		DBF0A35E2DABF9A100DB5FF0 /* QRGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QRGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBF0A3612DABF9A100DB5FF0 /* QRGeneratorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRGeneratorApp.swift; sourceTree = "<group>"; };
-		DBF0A3632DABF9A100DB5FF0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DBF0A3652DABF9A600DB5FF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBF0A3682DABF9A600DB5FF0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DBF0A36E2DABF9A700DB5FF0 /* QRGeneratorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QRGeneratorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +49,13 @@
 		DBF0A3782DABF9A700DB5FF0 /* QRGeneratorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QRGeneratorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBF0A37C2DABF9A700DB5FF0 /* QRGeneratorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRGeneratorUITests.swift; sourceTree = "<group>"; };
 		DBF0A37E2DABF9A700DB5FF0 /* QRGeneratorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRGeneratorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DBF0A38B2DABFCBE00DB5FF0 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
+		DBF0A38D2DABFCF200DB5FF0 /* GeneratorScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratorScreen.swift; sourceTree = "<group>"; };
+		DBF0A38F2DABFD3A00DB5FF0 /* QrCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrCodeView.swift; sourceTree = "<group>"; };
+		DBF0A3912DABFDF500DB5FF0 /* QRGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRGenerator.swift; sourceTree = "<group>"; };
+		DBF0A3932DABFE2300DB5FF0 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		DBF0A3952DABFE4B00DB5FF0 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		DBF0A3972DABFE8200DB5FF0 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +107,13 @@
 			isa = PBXGroup;
 			children = (
 				DBF0A3612DABF9A100DB5FF0 /* QRGeneratorApp.swift */,
-				DBF0A3632DABF9A100DB5FF0 /* ContentView.swift */,
+				DBF0A38B2DABFCBE00DB5FF0 /* MainScreen.swift */,
+				DBF0A38D2DABFCF200DB5FF0 /* GeneratorScreen.swift */,
+				DBF0A38F2DABFD3A00DB5FF0 /* QrCodeView.swift */,
+				DBF0A3912DABFDF500DB5FF0 /* QRGenerator.swift */,
+				DBF0A3932DABFE2300DB5FF0 /* AppError.swift */,
+				DBF0A3952DABFE4B00DB5FF0 /* Model.swift */,
+				DBF0A3972DABFE8200DB5FF0 /* Services.swift */,
 				DBF0A3652DABF9A600DB5FF0 /* Assets.xcassets */,
 				DBF0A3672DABF9A600DB5FF0 /* Preview Content */,
 			);
@@ -257,7 +275,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBF0A3642DABF9A100DB5FF0 /* ContentView.swift in Sources */,
+				DBF0A3962DABFE4B00DB5FF0 /* Model.swift in Sources */,
+				DBF0A3902DABFD3A00DB5FF0 /* QrCodeView.swift in Sources */,
+				DBF0A38C2DABFCBE00DB5FF0 /* MainScreen.swift in Sources */,
+				DBF0A3942DABFE2300DB5FF0 /* AppError.swift in Sources */,
+				DBF0A3922DABFDF500DB5FF0 /* QRGenerator.swift in Sources */,
+				DBF0A3982DABFE8200DB5FF0 /* Services.swift in Sources */,
+				DBF0A38E2DABFCF200DB5FF0 /* GeneratorScreen.swift in Sources */,
 				DBF0A3622DABF9A100DB5FF0 /* QRGeneratorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
