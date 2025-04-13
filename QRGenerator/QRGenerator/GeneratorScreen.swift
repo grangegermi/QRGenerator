@@ -4,12 +4,13 @@
 //
 
 import SwiftUI
+import SwiftData
 
 enum GeneratorType: CaseIterable {
     case link
     case wifi
     case instagram
-
+    
     var title: String {
         switch self {
         case .link:
@@ -24,12 +25,15 @@ enum GeneratorType: CaseIterable {
 
 struct GeneratorScreen: View {
     @Environment(\.qrGenerator) var qrGenerator
-
+    @Environment(\.dataManager) var modelManager
+    @Environment(\.modelContext) var context
+    
+    
     @State private var type = GeneratorType.link
     @State private var value1: String = ""
     @State private var value2: String = ""
     @State private var qrCode: ModelQR.QRCode?
-
+    
     var body: some View {
         VStack(spacing: 20) {
             Picker("", selection: $type) {
@@ -39,18 +43,18 @@ struct GeneratorScreen: View {
                 }
             }
             .pickerStyle(.segmented)
-
+            
             Spacer()
             switch type {
-                case .link:
+            case .link:
                 TextField("Enter URL", text: $value1)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
-                case .wifi:
+            case .wifi:
                 TextField("Enter SSID", text: $value1)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
-
+                
                 TextField("Enter Password", text: $value2)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
@@ -60,9 +64,17 @@ struct GeneratorScreen: View {
                     .padding()
             }
             Spacer()
-
+            
             Button("Generate QR Code") {
-                generateQRCode()
+                generateQRCode()                
+                do {
+                    guard let qr = qrCode else {return}
+                    do {
+                        try  modelManager.add(context: context, from: qr)
+                    }
+                } catch {
+                    DataBaseError.saveFailed
+                }
             }
             .modifier(ButtonStyle())
             .padding()
@@ -90,7 +102,7 @@ extension GeneratorScreen {
                 qrCode = try qrGenerator.generateInstagramQR(username: value1, size: 10)
             }
         } catch {
-            //Handle error
+            AppError.noInputData
         }
     }
 }

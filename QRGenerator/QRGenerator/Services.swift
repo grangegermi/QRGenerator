@@ -7,6 +7,7 @@ import SwiftUI
 
 enum Services {
     static let qrGenerator = Generator()
+    static let modelManager = ModelManager()
 }
 
 struct EnvironmentValueGenerator: EnvironmentKey {
@@ -19,4 +20,15 @@ extension EnvironmentValues {
             self[EnvironmentValueGenerator.self]
         }
     }
+    
+    struct  EnvironmentValueData: EnvironmentKey {
+        static let defaultValue: DataBaseManager = Services.modelManager
+    }
+    
+    var dataManager: DataBaseManager {
+         get {
+             self[EnvironmentValueData.self]
+         }
+     }
+    
 }

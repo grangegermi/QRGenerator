@@ -2,8 +2,6 @@
 //  Styles.swift
 //  QRGenerator
 //
-//  Created by Даша Волошина on 13.04.25.
-//
 
 import SwiftUI
 
@@ -15,6 +13,18 @@ struct ButtonStyle: ViewModifier {
             .foregroundColor(.white)
             .background(Color.accentColor)
             .cornerRadius(10.0)
+    }
+}
+
+enum Images: String {
+    case chevron = "chevron.left"
+    case share = "square.and.arrow.up"
+    case error = "exclamationmark.triangle.fill"
+}
+
+extension Image {
+    init(_ systemName: Images) {
+        self.init(systemName: systemName.rawValue)
     }
 }
 

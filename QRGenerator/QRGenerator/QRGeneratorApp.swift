@@ -4,12 +4,15 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct QRGeneratorApp: App {
     var body: some Scene {
         WindowGroup {
-            MainScreen()
+            MainScreen()                
         }
+        .modelContainer(for: [ModelQR.StoredQRCode.self])
     }
+    
 }

@@ -11,3 +11,8 @@ enum AppError: Error {
     case generatingQRCodeFailed
     case noConnection
 }
+
+enum DataBaseError: Error {
+    case saveFailed
+    case deleteFailed
+}

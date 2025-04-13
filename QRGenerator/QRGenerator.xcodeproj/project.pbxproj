@@ -23,6 +23,7 @@
 		DBF0A39B2DAC103300DB5FF0 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF0A39A2DAC103300DB5FF0 /* Styles.swift */; };
 		DBF0A39E2DAC132000DB5FF0 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF0A39D2DAC132000DB5FF0 /* Library.swift */; };
 		DBF0A3A02DAC143700DB5FF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBF0A39F2DAC143700DB5FF0 /* LaunchScreen.storyboard */; };
+		DBF0A3A22DAC18A700DB5FF0 /* ModelMannager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF0A3A12DAC18A700DB5FF0 /* ModelMannager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		DBF0A39C2DAC10DB00DB5FF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		DBF0A39D2DAC132000DB5FF0 /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 		DBF0A39F2DAC143700DB5FF0 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DBF0A3A12DAC18A700DB5FF0 /* ModelMannager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelMannager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +95,6 @@
 		DBF0A3552DABF9A100DB5FF0 = {
 			isa = PBXGroup;
 			children = (
-				DBF0A39F2DAC143700DB5FF0 /* LaunchScreen.storyboard */,
 				DBF0A3602DABF9A100DB5FF0 /* QRGenerator */,
 				DBF0A3712DABF9A700DB5FF0 /* QRGeneratorTests */,
 				DBF0A37B2DABF9A700DB5FF0 /* QRGeneratorUITests */,
@@ -124,8 +125,10 @@
 				DBF0A3912DABFDF500DB5FF0 /* QRGenerator.swift */,
 				DBF0A3932DABFE2300DB5FF0 /* AppError.swift */,
 				DBF0A3952DABFE4B00DB5FF0 /* Model.swift */,
+				DBF0A3A12DAC18A700DB5FF0 /* ModelMannager.swift */,
 				DBF0A3972DABFE8200DB5FF0 /* Services.swift */,
 				DBF0A3652DABF9A600DB5FF0 /* Assets.xcassets */,
+				DBF0A39F2DAC143700DB5FF0 /* LaunchScreen.storyboard */,
 				DBF0A3672DABF9A600DB5FF0 /* Preview Content */,
 			);
 			path = QRGenerator;
@@ -311,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBF0A39B2DAC103300DB5FF0 /* Styles.swift in Sources */,
+				DBF0A3A22DAC18A700DB5FF0 /* ModelMannager.swift in Sources */,
 				DBF0A3962DABFE4B00DB5FF0 /* Model.swift in Sources */,
 				DBF0A3902DABFD3A00DB5FF0 /* QrCodeView.swift in Sources */,
 				DBF0A38C2DABFCBE00DB5FF0 /* MainScreen.swift in Sources */,
